@@ -1,0 +1,30 @@
+<button (click)="test()">SPREMI</button>
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">SR</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Importo</th>
+      <th scope="col">Azioni</th>
+    </tr>
+  </thead>
+ <tbody> 
+<tr scope="row" *ngFor="let sr of ret1;let indexOfelement=index;">
+  <td>{{sr.userId}}</td>
+  <td>{{sr.id}}</td>
+  <td><input  [(ngModel)]="sr.title"></td>
+  <td>{{sr.body}}</td>
+  <td><button class="btn btn-outline-success" type="button" (click)="duplicaRecord(indexOfelement)">Duplica</button></td>
+</tr>
+ </tbody>
+</table>
+
+
+<!--
+	<tr app-utente *ngFor="let u of utenti" [utente-data]="u" 
+  (onDeleteUser)= "cancellaUtente($event)"
+  (onUpdateUser)= "aggiornaUtente($event)"
+  >
+
+  -->
