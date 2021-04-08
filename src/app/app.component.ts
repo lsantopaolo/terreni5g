@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
-
   constructor( private router: Router) { 
     
   }
